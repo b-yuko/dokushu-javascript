@@ -1,0 +1,34 @@
+<script>
+  // [4]
+  // ① setTimeout の利用
+  setTimeout(function(name){console.log("こんにちは、" + name)}, 2000, "独習太郎")
+
+  // ② アロー関数への書き換え
+  setTimeout(name => console.log("こんにちは、" + name), 2000, "独習太郎")
+
+  // ③ コールバック関数を複数利用
+  function add(val1, val2) {return val1 + val2}
+  function minus(val1, val2) {return val1 - val2}
+  function calcAndDisp(fun, log, val1, val2){log(fun(val1, val2))}
+  calcAndDisp(add, console.log, 3, 2)
+  calcAndDisp(minus, alert, 3, 2)
+
+  // [5]
+  // ①
+  const fn1 = (num1, num2) => num1 + num2
+
+  // ②
+  const fn2 = num => num * 2
+
+  // ③
+  const fn2 = () => console.log("Hello World")
+
+  // ④
+  const fn4 = name => {
+    console.log("Hello World")
+    console.log(`Hello ${name}!`)
+  }
+
+  // ⑤
+  const fn5 = () => ({name: "独習太郎"})
+</script>
