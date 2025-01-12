@@ -1,0 +1,19 @@
+<script>
+  function delayMessageFactory(fun, ms){
+    return (greet) => setTimeout(fun, ms, greet)
+  }
+
+  /**
+   * ケース１
+   * この場合には 2 秒後にダイアログで「こんにちは」が出力されます。
+  */
+  const dialog = delayMessageFactory(alert, 2000)
+  dialog("こんにちは")
+
+  /**
+   * ケース２
+   * この場合には 1 秒後にコンソールログに「こんばんは」が出力されます。
+   */
+  const log = delayMessageFactory(console.log, 1000)
+  log("こんばんは")
+</script>
