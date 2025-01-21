@@ -1,0 +1,16 @@
+<script>
+  const taro = {
+    name: "太郎",
+    hello: function (){   // jiro.hello から見たレキシカルスコープはこの関数スコープとなる
+      const jiro = {
+        name: "次郎",
+        hello: () => {   // アロー関数は this を持たない → レキシカルスコープに this を探しにいく
+          console.log("こんにちは、" + this.name)
+        }
+      }
+      jiro.hello()
+    }
+  }
+
+  taro.hello()   // こんにちは、太郎
+</script>
