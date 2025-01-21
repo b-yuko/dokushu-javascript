@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<script>
+  window.name = "独習 太郎"
+  const which = () => {
+    console.log(this.name)
+  }
+
+  const hanako = {
+    name: "独習 花子",
+    callName(){
+      which()
+    }
+  }
+
+  hanako.callName()   // 独習 太郎
+</script>
