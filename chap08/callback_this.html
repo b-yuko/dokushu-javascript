@@ -1,0 +1,16 @@
+<script>
+  window.name = "花子";
+
+  const taro = {
+    name: "太郎",
+    hello: function (){
+      console.log("こんにちは、" + this.name)
+    }
+  }
+
+  function greeting(callback){   // この時点で taro.hello と同じ関数を保持する ただの関数 になる
+    callback();   // callback関数(taro.hello)がこの時点で実行される
+  }
+
+  greeting(taro.hello)   // こんにちは、花子
+</script>
