@@ -1,0 +1,15 @@
+<script>
+  function hello(greeting){
+    console.log(greeting + this.name)
+  }
+
+  const taro = {
+    name: "太郎"
+  }
+
+  hello()   // undefined
+
+  // bind で this と引数を束縛
+  const helloTaro = hello.bind(taro, "こんにちは、")   // 関数を実行するのではなく、関数の this を束縛した新しい関数を作成しているだけ
+  helloTaro()
+</script>
