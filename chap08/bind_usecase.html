@@ -1,0 +1,17 @@
+<script>
+  window.name = "花子"
+
+  const taro = {
+    name: "太郎",
+    hello: function (){
+      console.log("こんにちは、" + this.name)
+    }
+  }
+
+  setTimeout(taro.hello, 2000)
+  setTimeout(taro.hello.bind(taro), 3000)
+
+  setTimeout(function (){
+    taro.hello()
+  }, 4000)
+</script>
