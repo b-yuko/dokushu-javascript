@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<script>
+  window.name = "花子"
+
+  const hello = () => {
+    console.log("こんにちは、" + this.name)
+  }
+
+  hello.call({name: "太郎"})   // こんにちは、花子
+  // アロー関数は、そもそも this を持っていないため、bind や call による this の束縛も使用できない。
+</script>
