@@ -1,0 +1,11 @@
+<script>
+  const taro = {name: "太郎"}
+
+  function hello(greeting, name){
+    console.log(`${greeting}、${name}`)
+    // console.log(`${greeting}、${this.name}`)
+  }
+
+  hello.apply(null, ["こんにちは", "太郎"])
+  // hello.apply(taro, ["こんにちは"])
+</script>
