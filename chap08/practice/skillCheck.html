@@ -1,0 +1,29 @@
+<script>
+  window.greeting = "こんにちは"
+
+  function hello(){
+    console.log(this.greeting)
+  }
+
+  hello()   // こんにちは
+
+  const dog = {
+    greeting: "ワンワン",
+    hello
+  }
+
+  dog.hello()   // ワンワン
+
+  const gorilla = {
+    greeting: "ウホウホ",
+    hello
+  }
+
+  gorilla.hello()   // ウホウホ
+
+  const transform = gorilla.hello
+  transform()   // こんにちは
+
+  setTimeout(gorilla.hello, 2000)
+  setTimeout(gorilla.hello.bind(gorilla), 2000)
+</script>
