@@ -1,0 +1,37 @@
+<script>
+  // ユーザー情報を管理するオブジェクトを仮定した場合
+  // ユーザー："独習太郎"
+  const taro = {
+    username: "独習太郎",
+    password: "taro-pwd",
+    login(){
+      console.log(`ログイン[${this.username} / ${this.password}]`)
+    }
+  }
+
+  // ユーザー："独習花子"
+  const hanako = {
+    username: "独習花子",
+    password: "hanako-pwd",
+    login(){
+      console.log(`ログイン[${this.username} / ${this.password}]`)
+    }
+  }
+
+// ----------------------------------------------------------------
+
+  class User {
+    constructor(username, password){
+      this.username = username
+      this.password = password
+    }
+
+    login(){
+      console.log(`ログイン[${this.username} / ${this.password}]`)
+    }
+  }
+
+  const taro2 = new User("独習太郎", "taro-pwd")
+  const hanako2 = new User("独習花子", "hanako-pwd")
+
+</script>
